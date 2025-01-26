@@ -1,0 +1,217 @@
+\doxysection{src/\+Read\+QTC.c File Reference}
+\hypertarget{ReadQTC_8c}{}\label{ReadQTC_8c}\index{src/ReadQTC.c@{src/ReadQTC.c}}
+
+
+source file of the Read\+QTC module.  
+
+
+{\ttfamily \#include "{}../include/\+Read\+QTC.\+h"{}}\newline
+{\ttfamily \#include "{}../include/\+Bit\+Buffer\+Read.\+h"{}}\newline
+{\ttfamily \#include "{}../include/\+Quad\+Tree.\+h"{}}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+Include dependency graph for Read\+QTC.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ReadQTC_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{ReadQTC_8c_a9247f952026920331dfe98107ede659b}{fill\+Quad\+Treefrom\+Compress}} (FILE \texorpdfstring{$\ast$}{*}file, \mbox{\hyperlink{structQuadTree}{Quad\+Tree}} \texorpdfstring{$\ast$}{*}quadtree)
+\begin{DoxyCompactList}\small\item\em fills the quadtree from the file \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{ReadQTC_8c_a0a73a7ba1352400b1f0ab98e91b8b599}{get\+Node\+Depth}} (int node\+Index)
+\begin{DoxyCompactList}\small\item\em a little function to determine the depth of a node by its index. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{ReadQTC_8c_a9676ff68c7820393dc1ee43ccea54cab}{is\+Fourth\+Child}} (int node\+Index)
+\begin{DoxyCompactList}\small\item\em verifies if the node is the fourth child of a tree. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structQuadTree}{Quad\+Tree}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{ReadQTC_8c_a5c66974a67fa4f76a349f32d76b52582}{read\+QTC}} (const char \texorpdfstring{$\ast$}{*}filename)
+\begin{DoxyCompactList}\small\item\em read\+QTC takes in input the name of a qtc file and returns a quadtree. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{ReadQTC_8c_ae263e6b4febc618d685320fab20de320}{handle\+Unitary\+Parent}} (\mbox{\hyperlink{structQuadTree}{Quad\+Tree}} \texorpdfstring{$\ast$}{*}quadtree, int i)
+\begin{DoxyCompactList}\small\item\em fills the node i of the quadtree in the case the parent is unitary. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{ReadQTC_8c_aef837ba13de96d3c025a7724c6901118}{handle\+Fourth\+Child}} (\mbox{\hyperlink{structQuadTree}{Quad\+Tree}} \texorpdfstring{$\ast$}{*}quadtree, int i, \mbox{\hyperlink{structBitReader}{Bit\+Reader}} \texorpdfstring{$\ast$}{*}bitreader)
+\begin{DoxyCompactList}\small\item\em fills the quadtree in the case the node is the fourth of a branch. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{ReadQTC_8c_a3cebc61d4724cc0edc02c52dd3a60e0f}{the\+Normal\+Wayyyy}} (\mbox{\hyperlink{structQuadTree}{Quad\+Tree}} \texorpdfstring{$\ast$}{*}quadtree, int i, \mbox{\hyperlink{structBitReader}{Bit\+Reader}} \texorpdfstring{$\ast$}{*}bit\+Reader)
+\begin{DoxyCompactList}\small\item\em fills the node of a quadtree. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+source file of the Read\+QTC module. 
+
+\begin{DoxyAuthor}{Author}
+xyannick3 and Carapace\+Rose 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{ReadQTC_8c_a9247f952026920331dfe98107ede659b}\label{ReadQTC_8c_a9247f952026920331dfe98107ede659b} 
+\index{ReadQTC.c@{ReadQTC.c}!fillQuadTreefromCompress@{fillQuadTreefromCompress}}
+\index{fillQuadTreefromCompress@{fillQuadTreefromCompress}!ReadQTC.c@{ReadQTC.c}}
+\doxysubsubsection{\texorpdfstring{fillQuadTreefromCompress()}{fillQuadTreefromCompress()}}
+{\footnotesize\ttfamily void fill\+Quad\+Treefrom\+Compress (\begin{DoxyParamCaption}\item[{FILE \texorpdfstring{$\ast$}{*}}]{file,  }\item[{\mbox{\hyperlink{structQuadTree}{Quad\+Tree}} \texorpdfstring{$\ast$}{*}}]{quadtree }\end{DoxyParamCaption})}
+
+
+
+fills the quadtree from the file 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file} & the file \\
+\hline
+{\em quadtree} & the quadtree. \\
+\hline
+\end{DoxyParams}
+
+
+References \mbox{\hyperlink{ReadQTC_8c_aef837ba13de96d3c025a7724c6901118}{handle\+Fourth\+Child()}}, \mbox{\hyperlink{ReadQTC_8c_ae263e6b4febc618d685320fab20de320}{handle\+Unitary\+Parent()}}, \mbox{\hyperlink{BitBufferRead_8h_a1f7a4ce2cde42e17a128f541b26960b7}{init\+Bit\+Reader()}}, \mbox{\hyperlink{ReadQTC_8c_a9676ff68c7820393dc1ee43ccea54cab}{is\+Fourth\+Child()}}, \mbox{\hyperlink{BitBufferRead_8h_ad5436bef3135ea1843cd9f18ccd51f7c}{read\+Bit()}}, \mbox{\hyperlink{BitBufferRead_8h_ab5abe8fff4bf99b517f5a2a078905462}{read\+Byte()}}, \mbox{\hyperlink{BitBufferRead_8h_a3cd84051292b3fc632fecb43187aad3f}{read\+Two\+Bits()}}, and \mbox{\hyperlink{ReadQTC_8c_a3cebc61d4724cc0edc02c52dd3a60e0f}{the\+Normal\+Wayyyy()}}.
+
+
+
+Referenced by \mbox{\hyperlink{ReadQTC_8h_a5c66974a67fa4f76a349f32d76b52582}{read\+QTC()}}.
+
+\Hypertarget{ReadQTC_8c_a0a73a7ba1352400b1f0ab98e91b8b599}\label{ReadQTC_8c_a0a73a7ba1352400b1f0ab98e91b8b599} 
+\index{ReadQTC.c@{ReadQTC.c}!getNodeDepth@{getNodeDepth}}
+\index{getNodeDepth@{getNodeDepth}!ReadQTC.c@{ReadQTC.c}}
+\doxysubsubsection{\texorpdfstring{getNodeDepth()}{getNodeDepth()}}
+{\footnotesize\ttfamily int get\+Node\+Depth (\begin{DoxyParamCaption}\item[{int}]{node\+Index }\end{DoxyParamCaption})}
+
+
+
+a little function to determine the depth of a node by its index. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em node\+Index} & the index of a node. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the depth. 
+\end{DoxyReturn}
+
+
+Referenced by \mbox{\hyperlink{ReadQTC_8c_aef837ba13de96d3c025a7724c6901118}{handle\+Fourth\+Child()}}, \mbox{\hyperlink{ReadQTC_8c_ae263e6b4febc618d685320fab20de320}{handle\+Unitary\+Parent()}}, and \mbox{\hyperlink{ReadQTC_8c_a3cebc61d4724cc0edc02c52dd3a60e0f}{the\+Normal\+Wayyyy()}}.
+
+\Hypertarget{ReadQTC_8c_aef837ba13de96d3c025a7724c6901118}\label{ReadQTC_8c_aef837ba13de96d3c025a7724c6901118} 
+\index{ReadQTC.c@{ReadQTC.c}!handleFourthChild@{handleFourthChild}}
+\index{handleFourthChild@{handleFourthChild}!ReadQTC.c@{ReadQTC.c}}
+\doxysubsubsection{\texorpdfstring{handleFourthChild()}{handleFourthChild()}}
+{\footnotesize\ttfamily void handle\+Fourth\+Child (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structQuadTree}{Quad\+Tree}} \texorpdfstring{$\ast$}{*}}]{quadtree,  }\item[{int}]{i,  }\item[{\mbox{\hyperlink{structBitReader}{Bit\+Reader}} \texorpdfstring{$\ast$}{*}}]{bitreader }\end{DoxyParamCaption})}
+
+
+
+fills the quadtree in the case the node is the fourth of a branch. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em quadtree} & the quadtree. \\
+\hline
+{\em i} & the index \\
+\hline
+{\em bitreader} & the bitreader \\
+\hline
+\end{DoxyParams}
+
+
+References \mbox{\hyperlink{ReadQTC_8c_a0a73a7ba1352400b1f0ab98e91b8b599}{get\+Node\+Depth()}}, \mbox{\hyperlink{BitBufferRead_8h_ad5436bef3135ea1843cd9f18ccd51f7c}{read\+Bit()}}, and \mbox{\hyperlink{BitBufferRead_8h_a3cd84051292b3fc632fecb43187aad3f}{read\+Two\+Bits()}}.
+
+
+
+Referenced by \mbox{\hyperlink{ReadQTC_8c_a9247f952026920331dfe98107ede659b}{fill\+Quad\+Treefrom\+Compress()}}.
+
+\Hypertarget{ReadQTC_8c_ae263e6b4febc618d685320fab20de320}\label{ReadQTC_8c_ae263e6b4febc618d685320fab20de320} 
+\index{ReadQTC.c@{ReadQTC.c}!handleUnitaryParent@{handleUnitaryParent}}
+\index{handleUnitaryParent@{handleUnitaryParent}!ReadQTC.c@{ReadQTC.c}}
+\doxysubsubsection{\texorpdfstring{handleUnitaryParent()}{handleUnitaryParent()}}
+{\footnotesize\ttfamily void handle\+Unitary\+Parent (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structQuadTree}{Quad\+Tree}} \texorpdfstring{$\ast$}{*}}]{quadtree,  }\item[{int}]{i }\end{DoxyParamCaption})}
+
+
+
+fills the node i of the quadtree in the case the parent is unitary. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em quadtree} & the quadtree \\
+\hline
+{\em i} & the index of the node. \\
+\hline
+\end{DoxyParams}
+
+
+References \mbox{\hyperlink{ReadQTC_8c_a0a73a7ba1352400b1f0ab98e91b8b599}{get\+Node\+Depth()}}.
+
+
+
+Referenced by \mbox{\hyperlink{ReadQTC_8c_a9247f952026920331dfe98107ede659b}{fill\+Quad\+Treefrom\+Compress()}}.
+
+\Hypertarget{ReadQTC_8c_a9676ff68c7820393dc1ee43ccea54cab}\label{ReadQTC_8c_a9676ff68c7820393dc1ee43ccea54cab} 
+\index{ReadQTC.c@{ReadQTC.c}!isFourthChild@{isFourthChild}}
+\index{isFourthChild@{isFourthChild}!ReadQTC.c@{ReadQTC.c}}
+\doxysubsubsection{\texorpdfstring{isFourthChild()}{isFourthChild()}}
+{\footnotesize\ttfamily int is\+Fourth\+Child (\begin{DoxyParamCaption}\item[{int}]{node\+Index }\end{DoxyParamCaption})}
+
+
+
+verifies if the node is the fourth child of a tree. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em node\+Index} & the node of the index studied \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 if it is, else 0. 
+\end{DoxyReturn}
+
+
+Referenced by \mbox{\hyperlink{ReadQTC_8c_a9247f952026920331dfe98107ede659b}{fill\+Quad\+Treefrom\+Compress()}}.
+
+\Hypertarget{ReadQTC_8c_a5c66974a67fa4f76a349f32d76b52582}\label{ReadQTC_8c_a5c66974a67fa4f76a349f32d76b52582} 
+\index{ReadQTC.c@{ReadQTC.c}!readQTC@{readQTC}}
+\index{readQTC@{readQTC}!ReadQTC.c@{ReadQTC.c}}
+\doxysubsubsection{\texorpdfstring{readQTC()}{readQTC()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structQuadTree}{Quad\+Tree}} \texorpdfstring{$\ast$}{*} read\+QTC (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{filename }\end{DoxyParamCaption})}
+
+
+
+read\+QTC takes in input the name of a qtc file and returns a quadtree. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & the name of the qtc file. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a quadtree. 
+\end{DoxyReturn}
+
+
+References \mbox{\hyperlink{ReadQTC_8c_a9247f952026920331dfe98107ede659b}{fill\+Quad\+Treefrom\+Compress()}}, and \mbox{\hyperlink{QuadTree_8h_a013b14610540996331c263028ba4da6f}{init\+Quad\+Tree()}}.
+
+\Hypertarget{ReadQTC_8c_a3cebc61d4724cc0edc02c52dd3a60e0f}\label{ReadQTC_8c_a3cebc61d4724cc0edc02c52dd3a60e0f} 
+\index{ReadQTC.c@{ReadQTC.c}!theNormalWayyyy@{theNormalWayyyy}}
+\index{theNormalWayyyy@{theNormalWayyyy}!ReadQTC.c@{ReadQTC.c}}
+\doxysubsubsection{\texorpdfstring{theNormalWayyyy()}{theNormalWayyyy()}}
+{\footnotesize\ttfamily void the\+Normal\+Wayyyy (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structQuadTree}{Quad\+Tree}} \texorpdfstring{$\ast$}{*}}]{quadtree,  }\item[{int}]{i,  }\item[{\mbox{\hyperlink{structBitReader}{Bit\+Reader}} \texorpdfstring{$\ast$}{*}}]{bit\+Reader }\end{DoxyParamCaption})}
+
+
+
+fills the node of a quadtree. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em quadtree} & the quadtree \\
+\hline
+{\em i} & the index \\
+\hline
+{\em bitreader} & the bitreader. \\
+\hline
+\end{DoxyParams}
+
+
+References \mbox{\hyperlink{ReadQTC_8c_a0a73a7ba1352400b1f0ab98e91b8b599}{get\+Node\+Depth()}}, \mbox{\hyperlink{BitBufferRead_8h_ad5436bef3135ea1843cd9f18ccd51f7c}{read\+Bit()}}, \mbox{\hyperlink{BitBufferRead_8h_ab5abe8fff4bf99b517f5a2a078905462}{read\+Byte()}}, and \mbox{\hyperlink{BitBufferRead_8h_a3cd84051292b3fc632fecb43187aad3f}{read\+Two\+Bits()}}.
+
+
+
+Referenced by \mbox{\hyperlink{ReadQTC_8c_a9247f952026920331dfe98107ede659b}{fill\+Quad\+Treefrom\+Compress()}}.
+

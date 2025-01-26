@@ -1,0 +1,22 @@
+\doxysection{Bit\+Buffer\+Read.\+h}
+\hypertarget{BitBufferRead_8h_source}{}\label{BitBufferRead_8h_source}\index{include/BitBufferRead.h@{include/BitBufferRead.h}}
+\mbox{\hyperlink{BitBufferRead_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#ifndef\ \_\_BITBUFFERREADER\_H\_\_}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ \_\_BITBUFFERREADER\_H\_\_\ }}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#define\ MAX\_BITS\ 8}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <stdio.h>}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00017\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct}\{}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ buffer;}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordtype}{int}\ bitcount;}
+\DoxyCodeLine{00020\ \ \ \ \ FILE\ *file;}
+\DoxyCodeLine{00021\ \}\ \mbox{\hyperlink{structBitReader}{BitReader}};}
+\DoxyCodeLine{00027\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{BitBufferRead_8h_a1f7a4ce2cde42e17a128f541b26960b7}{initBitReader}}(\mbox{\hyperlink{structBitReader}{BitReader}}\ *bitReader,\ FILE\ *file);}
+\DoxyCodeLine{00034\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{BitBufferRead_8h_ad5436bef3135ea1843cd9f18ccd51f7c}{readBit}}(\mbox{\hyperlink{structBitReader}{BitReader}}\ *bitReader,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ *bit);}
+\DoxyCodeLine{00041\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{BitBufferRead_8h_ab5abe8fff4bf99b517f5a2a078905462}{readByte}}(\mbox{\hyperlink{structBitReader}{BitReader}}\ *bitReader,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ *\textcolor{keywordtype}{byte});}
+\DoxyCodeLine{00048\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{BitBufferRead_8h_a3cd84051292b3fc632fecb43187aad3f}{readTwoBits}}(\mbox{\hyperlink{structBitReader}{BitReader}}\ *bitReader,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ *value);}
+\DoxyCodeLine{00049\ \textcolor{preprocessor}{\#endif\ }}
+
+\end{DoxyCode}

@@ -1,0 +1,59 @@
+\doxysection{include/filtrage.h File Reference}
+\hypertarget{filtrage_8h}{}\label{filtrage_8h}\index{include/filtrage.h@{include/filtrage.h}}
+
+
+prototype of the public functions of the filtrage module.  
+
+
+{\ttfamily \#include "{}Quad\+Tree.\+h"{}}\newline
+Include dependency graph for filtrage.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=178pt]{filtrage_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=242pt]{filtrage_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{filtrage_8h_aacc020a397f45750317afb735e025414}{filtrage}} (\mbox{\hyperlink{structQuadTree}{Quad\+Tree}} \texorpdfstring{$\ast$}{*}tree, double alpha)
+\begin{DoxyCompactList}\small\item\em function that filter the nodes of the quadtree \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+prototype of the public functions of the filtrage module. 
+
+\begin{DoxyAuthor}{Author}
+xyannick3 and Carapace\+Rose 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{filtrage_8h_aacc020a397f45750317afb735e025414}\label{filtrage_8h_aacc020a397f45750317afb735e025414} 
+\index{filtrage.h@{filtrage.h}!filtrage@{filtrage}}
+\index{filtrage@{filtrage}!filtrage.h@{filtrage.h}}
+\doxysubsubsection{\texorpdfstring{filtrage()}{filtrage()}}
+{\footnotesize\ttfamily void filtrage (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structQuadTree}{Quad\+Tree}} \texorpdfstring{$\ast$}{*}}]{tree,  }\item[{double}]{alpha }\end{DoxyParamCaption})}
+
+
+
+function that filter the nodes of the quadtree 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tree} & the quadtree that\textquotesingle{}s to be filtered. \\
+\hline
+{\em alpha} & the value that determines how much the quadtree is to be filtered. \\
+\hline
+\end{DoxyParams}
+
+
+References \mbox{\hyperlink{filtrage_8c_a1fe970c9615b6d8ac4ac9a0efc976743}{compute\+Vars()}}, and \mbox{\hyperlink{filtrage_8c_a72dfd1b37f04702220b72793e5443088}{filtrage\+Node()}}.
+

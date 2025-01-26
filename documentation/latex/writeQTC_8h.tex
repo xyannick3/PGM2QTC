@@ -1,0 +1,64 @@
+\doxysection{include/write\+QTC.h File Reference}
+\hypertarget{writeQTC_8h}{}\label{writeQTC_8h}\index{include/writeQTC.h@{include/writeQTC.h}}
+
+
+prototype of the public functions and structures of the modude write\+Quad\+Tree.  
+
+
+{\ttfamily \#include "{}Quad\+Tree.\+h"{}}\newline
+{\ttfamily \#include "{}Bit\+Buffer\+Write.\+h"{}}\newline
+Include dependency graph for write\+QTC.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=264pt]{writeQTC_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=252pt]{writeQTC_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{writeQTC_8h_a3832ee46511970bd77c109af756cc91a}{write\+QTCFile}} (const char \texorpdfstring{$\ast$}{*}filename, \mbox{\hyperlink{structQuadTree}{Quad\+Tree}} \texorpdfstring{$\ast$}{*}tree, int image\+Size, int depth)
+\begin{DoxyCompactList}\small\item\em write the quadtree into the qtc file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+prototype of the public functions and structures of the modude write\+Quad\+Tree. 
+
+\begin{DoxyAuthor}{Author}
+xyannick3 and Carapace\+Rose 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{writeQTC_8h_a3832ee46511970bd77c109af756cc91a}\label{writeQTC_8h_a3832ee46511970bd77c109af756cc91a} 
+\index{writeQTC.h@{writeQTC.h}!writeQTCFile@{writeQTCFile}}
+\index{writeQTCFile@{writeQTCFile}!writeQTC.h@{writeQTC.h}}
+\doxysubsubsection{\texorpdfstring{writeQTCFile()}{writeQTCFile()}}
+{\footnotesize\ttfamily void write\+QTCFile (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{filename,  }\item[{\mbox{\hyperlink{structQuadTree}{Quad\+Tree}} \texorpdfstring{$\ast$}{*}}]{tree,  }\item[{int}]{image\+Size,  }\item[{int}]{depth }\end{DoxyParamCaption})}
+
+
+
+write the quadtree into the qtc file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & the name of the qtc file. \\
+\hline
+{\em tree} & the quadtree. \\
+\hline
+{\em image\+Size} & the width of the image. \\
+\hline
+{\em depth} & the depth. \\
+\hline
+\end{DoxyParams}
+
+
+References \mbox{\hyperlink{writeQTC_8c_a286f4b8f5bb29a30f0f17b34ef6be8e3}{calculate\+Compression\+Rate2()}}, \mbox{\hyperlink{writeQTC_8c_a1b0c5e0150668b2a3e1475d7bfec6b61}{calculate\+Size()}}, \mbox{\hyperlink{writeQTC_8c_a520574ec5642cec0cec8f67782fc06a2}{encode\+Quad\+Tree()}}, \mbox{\hyperlink{BitBufferWrite_8h_adcc57f093a3b7c7799457ef5f9b20b38}{flush\+Buffer()}}, \mbox{\hyperlink{BitBufferWrite_8h_a1b3e85dd8012fa0c68783303a25812e7}{init\+Bit\+Buffer()}}, and \mbox{\hyperlink{BitBufferWrite_8h_afa17bcdaccc5a9b673c8f4910fa9c070}{write\+Bit()}}.
+

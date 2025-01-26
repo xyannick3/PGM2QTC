@@ -1,0 +1,15 @@
+<map id="src/ReadQTC.c" name="src/ReadQTC.c">
+<area shape="rect" id="Node000001" title="source file of the ReadQTC module." alt="" coords="273,5,387,31"/>
+<area shape="rect" id="Node000002" href="$ReadQTC_8h.html" title="prototype of the public functions and structures of the modude ReadQTC." alt="" coords="5,79,161,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="291,33,137,77,136,72,290,28"/>
+<area shape="rect" id="Node000003" href="$QuadTree_8h.html" title="prototype of the public functions and structures of the modude Quadtree." alt="" coords="95,152,189,177"/>
+<area shape="poly" id="edge5_Node000001_Node000003" title=" " alt="" coords="307,33,268,54,226,81,191,112,162,144,158,140,187,109,223,77,265,49,304,28"/>
+<area shape="rect" id="Node000004" href="$BitBufferRead_8h.html" title="source code of the bitbuffer module, it is used to write bit per bit into a file." alt="" coords="237,79,423,104"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="333,31,333,65,327,65,327,31"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="362,152,429,177"/>
+<area shape="poly" id="edge6_Node000001_Node000005" title=" " alt="" coords="372,28,408,47,424,60,438,77,442,95,439,112,420,143,415,140,434,110,437,95,433,80,421,64,405,51,369,33"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="499,79,569,104"/>
+<area shape="poly" id="edge7_Node000001_Node000006" title=" " alt="" coords="364,28,489,72,487,77,362,33"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="95,103,126,140,122,143,91,106"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="343,103,377,140,374,144,339,106"/>
+</map>

@@ -1,0 +1,95 @@
+\doxysection{src/write\+PGM.c File Reference}
+\hypertarget{writePGM_8c}{}\label{writePGM_8c}\index{src/writePGM.c@{src/writePGM.c}}
+
+
+source file of the write\+PGM module.  
+
+
+{\ttfamily \#include $<$time.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include "{}../include/write\+PGM.\+h"{}}\newline
+{\ttfamily \#include "{}../include/\+Quad\+Tree.\+h"{}}\newline
+Include dependency graph for write\+PGM.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{writePGM_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{writePGM_8c_a5afa5ef3c1fd3ecb775908b7f3b56c4e}{fill\+Pixels}} (unsigned char \texorpdfstring{$\ast$}{*}pixels, \mbox{\hyperlink{structQuadTreeNode}{Quad\+Tree\+Node}} \texorpdfstring{$\ast$}{*}nodes, int node\+Index, int x, int y, int size, int width)
+\begin{DoxyCompactList}\small\item\em fills the pixmap with the selected node at the said coordinates. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{writePGM_8c_a0801075df2da5f9c4c9b269b7222dac8}{write\+PGMFrom\+Quad\+Tree}} (\mbox{\hyperlink{structQuadTree}{Quad\+Tree}} \texorpdfstring{$\ast$}{*}tree, const char \texorpdfstring{$\ast$}{*}filename, int size)
+\begin{DoxyCompactList}\small\item\em write the PGM from the quadtree \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+source file of the write\+PGM module. 
+
+\begin{DoxyAuthor}{Author}
+xyannick3 and Carapace\+Rose 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{writePGM_8c_a5afa5ef3c1fd3ecb775908b7f3b56c4e}\label{writePGM_8c_a5afa5ef3c1fd3ecb775908b7f3b56c4e} 
+\index{writePGM.c@{writePGM.c}!fillPixels@{fillPixels}}
+\index{fillPixels@{fillPixels}!writePGM.c@{writePGM.c}}
+\doxysubsubsection{\texorpdfstring{fillPixels()}{fillPixels()}}
+{\footnotesize\ttfamily void fill\+Pixels (\begin{DoxyParamCaption}\item[{unsigned char \texorpdfstring{$\ast$}{*}}]{pixels,  }\item[{\mbox{\hyperlink{structQuadTreeNode}{Quad\+Tree\+Node}} \texorpdfstring{$\ast$}{*}}]{nodes,  }\item[{int}]{node\+Index,  }\item[{int}]{x,  }\item[{int}]{y,  }\item[{int}]{size,  }\item[{int}]{width }\end{DoxyParamCaption})}
+
+
+
+fills the pixmap with the selected node at the said coordinates. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pixels} & the pixmap. \\
+\hline
+{\em nodes} & the node array. \\
+\hline
+{\em node\+Index} & the index of the node. \\
+\hline
+{\em x} & the x coordinate of the pixel. \\
+\hline
+{\em y} & the y coordinate of the pixel. \\
+\hline
+{\em size} & the size of the area. \\
+\hline
+{\em width} & the width of the image. \\
+\hline
+\end{DoxyParams}
+
+
+References \mbox{\hyperlink{writePGM_8c_a5afa5ef3c1fd3ecb775908b7f3b56c4e}{fill\+Pixels()}}.
+
+
+
+Referenced by \mbox{\hyperlink{writePGM_8c_a5afa5ef3c1fd3ecb775908b7f3b56c4e}{fill\+Pixels()}}, and \mbox{\hyperlink{writePGM_8h_a0801075df2da5f9c4c9b269b7222dac8}{write\+PGMFrom\+Quad\+Tree()}}.
+
+\Hypertarget{writePGM_8c_a0801075df2da5f9c4c9b269b7222dac8}\label{writePGM_8c_a0801075df2da5f9c4c9b269b7222dac8} 
+\index{writePGM.c@{writePGM.c}!writePGMFromQuadTree@{writePGMFromQuadTree}}
+\index{writePGMFromQuadTree@{writePGMFromQuadTree}!writePGM.c@{writePGM.c}}
+\doxysubsubsection{\texorpdfstring{writePGMFromQuadTree()}{writePGMFromQuadTree()}}
+{\footnotesize\ttfamily int write\+PGMFrom\+Quad\+Tree (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structQuadTree}{Quad\+Tree}} \texorpdfstring{$\ast$}{*}}]{tree,  }\item[{const char \texorpdfstring{$\ast$}{*}}]{filename,  }\item[{int}]{size }\end{DoxyParamCaption})}
+
+
+
+write the PGM from the quadtree 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tree} & the quadtree \\
+\hline
+{\em filename} & the name of the pgm file. \\
+\hline
+{\em size} & the width of the image. \\
+\hline
+\end{DoxyParams}
+
+
+References \mbox{\hyperlink{writePGM_8c_a5afa5ef3c1fd3ecb775908b7f3b56c4e}{fill\+Pixels()}}.
+

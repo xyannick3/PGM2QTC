@@ -1,0 +1,14 @@
+<map id="include/BitBufferWrite.h" name="include/BitBufferWrite.h">
+<area shape="rect" id="Node000001" title="source code of the bitBufferWrite module&#39;s public functions, it is used to write bit per bit into a f..." alt="" coords="153,5,330,31"/>
+<area shape="rect" id="Node000002" href="$writeQTC_8h.html" title="prototype of the public functions and structures of the modude writeQuadTree." alt="" coords="5,79,149,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="203,39,105,81,103,76,201,34"/>
+<area shape="rect" id="Node000004" href="$writeQTC_8c.html" title="source file of the writeQTC module." alt="" coords="129,152,244,177"/>
+<area shape="poly" id="edge6_Node000001_Node000004" title=" " alt="" coords="231,44,214,80,192,152,187,151,210,78,226,42"/>
+<area shape="rect" id="Node000005" href="$BitBufferRead_8c.html" title="source code of the bitbuffer module&#39;s public functions" alt="" coords="224,79,371,104"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="261,40,290,77,286,80,257,43"/>
+<area shape="rect" id="Node000006" href="$BitBufferWrite_8c.html" title="source code of the bitbuffer module, it is used to write bit per bit into a file." alt="" coords="395,79,543,104"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="292,32,433,76,432,81,290,37"/>
+<area shape="rect" id="Node000003" href="$main_8c.html" title="the main file." alt="" coords="15,152,105,177"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="74,118,65,153,60,151,69,117"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="108,109,170,150,167,154,105,114"/>
+</map>

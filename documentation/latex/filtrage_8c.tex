@@ -1,0 +1,143 @@
+\doxysection{src/filtrage.c File Reference}
+\hypertarget{filtrage_8c}{}\label{filtrage_8c}\index{src/filtrage.c@{src/filtrage.c}}
+
+
+source file of the filtrage module.  
+
+
+{\ttfamily \#include "{}../include/filtrage.\+h"{}}\newline
+{\ttfamily \#include "{}../include/\+Quad\+Tree.\+h"{}}\newline
+{\ttfamily \#include $<$math.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+Include dependency graph for filtrage.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{filtrage_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{filtrage_8c_adcb1530988a8a882e04527cb446e1446}{compute\+Variance}} (\mbox{\hyperlink{structQuadTreeNode}{Quad\+Tree\+Node}} \texorpdfstring{$\ast$}{*}node, \mbox{\hyperlink{structQuadTree}{Quad\+Tree}} \texorpdfstring{$\ast$}{*}tree)
+\begin{DoxyCompactList}\small\item\em calculate the variance of a specific node. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{filtrage_8c_a1fe970c9615b6d8ac4ac9a0efc976743}{compute\+Vars}} (\mbox{\hyperlink{structQuadTree}{Quad\+Tree}} \texorpdfstring{$\ast$}{*}tree, double \texorpdfstring{$\ast$}{*}medvar, double \texorpdfstring{$\ast$}{*}maxvar)
+\begin{DoxyCompactList}\small\item\em computer the medvar and maxvar of a quadtree. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{filtrage_8c_a72dfd1b37f04702220b72793e5443088}{filtrage\+Node}} (\mbox{\hyperlink{structQuadTree}{Quad\+Tree}} \texorpdfstring{$\ast$}{*}tree, int node\+Index, double sigma, double alpha)
+\begin{DoxyCompactList}\small\item\em filtrage\+Node is a recursive function that filters the nodes of the tree. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{filtrage_8c_aacc020a397f45750317afb735e025414}{filtrage}} (\mbox{\hyperlink{structQuadTree}{Quad\+Tree}} \texorpdfstring{$\ast$}{*}tree, double alpha)
+\begin{DoxyCompactList}\small\item\em function that filter the nodes of the quadtree \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+source file of the filtrage module. 
+
+source file of the \doxylink{padPGM_8h}{pad\+PGM.\+h} module.
+
+\begin{DoxyAuthor}{Author}
+xyannick3 and Carapace\+Rose 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{filtrage_8c_adcb1530988a8a882e04527cb446e1446}\label{filtrage_8c_adcb1530988a8a882e04527cb446e1446} 
+\index{filtrage.c@{filtrage.c}!computeVariance@{computeVariance}}
+\index{computeVariance@{computeVariance}!filtrage.c@{filtrage.c}}
+\doxysubsubsection{\texorpdfstring{computeVariance()}{computeVariance()}}
+{\footnotesize\ttfamily double compute\+Variance (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structQuadTreeNode}{Quad\+Tree\+Node}} \texorpdfstring{$\ast$}{*}}]{node,  }\item[{\mbox{\hyperlink{structQuadTree}{Quad\+Tree}} \texorpdfstring{$\ast$}{*}}]{tree }\end{DoxyParamCaption})}
+
+
+
+calculate the variance of a specific node. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em node} & the node that\textquotesingle{}s studied. \\
+\hline
+{\em tree} & the quadtree to have further info on the quadtree. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+variance 
+\end{DoxyReturn}
+
+
+Referenced by \mbox{\hyperlink{filtrage_8c_a1fe970c9615b6d8ac4ac9a0efc976743}{compute\+Vars()}}, and \mbox{\hyperlink{filtrage_8c_a72dfd1b37f04702220b72793e5443088}{filtrage\+Node()}}.
+
+\Hypertarget{filtrage_8c_a1fe970c9615b6d8ac4ac9a0efc976743}\label{filtrage_8c_a1fe970c9615b6d8ac4ac9a0efc976743} 
+\index{filtrage.c@{filtrage.c}!computeVars@{computeVars}}
+\index{computeVars@{computeVars}!filtrage.c@{filtrage.c}}
+\doxysubsubsection{\texorpdfstring{computeVars()}{computeVars()}}
+{\footnotesize\ttfamily void compute\+Vars (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structQuadTree}{Quad\+Tree}} \texorpdfstring{$\ast$}{*}}]{tree,  }\item[{double \texorpdfstring{$\ast$}{*}}]{medvar,  }\item[{double \texorpdfstring{$\ast$}{*}}]{maxvar }\end{DoxyParamCaption})}
+
+
+
+computer the medvar and maxvar of a quadtree. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tree} & the quadtree. \\
+\hline
+{\em medvar} & the calculated medvar \\
+\hline
+{\em maxvar} & the maximal variance calculated. \\
+\hline
+\end{DoxyParams}
+
+
+References \mbox{\hyperlink{filtrage_8c_adcb1530988a8a882e04527cb446e1446}{compute\+Variance()}}.
+
+
+
+Referenced by \mbox{\hyperlink{filtrage_8h_aacc020a397f45750317afb735e025414}{filtrage()}}.
+
+\Hypertarget{filtrage_8c_aacc020a397f45750317afb735e025414}\label{filtrage_8c_aacc020a397f45750317afb735e025414} 
+\index{filtrage.c@{filtrage.c}!filtrage@{filtrage}}
+\index{filtrage@{filtrage}!filtrage.c@{filtrage.c}}
+\doxysubsubsection{\texorpdfstring{filtrage()}{filtrage()}}
+{\footnotesize\ttfamily void filtrage (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structQuadTree}{Quad\+Tree}} \texorpdfstring{$\ast$}{*}}]{tree,  }\item[{double}]{alpha }\end{DoxyParamCaption})}
+
+
+
+function that filter the nodes of the quadtree 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tree} & the quadtree that\textquotesingle{}s to be filtered. \\
+\hline
+{\em alpha} & the value that determines how much the quadtree is to be filtered. \\
+\hline
+\end{DoxyParams}
+
+
+References \mbox{\hyperlink{filtrage_8c_a1fe970c9615b6d8ac4ac9a0efc976743}{compute\+Vars()}}, and \mbox{\hyperlink{filtrage_8c_a72dfd1b37f04702220b72793e5443088}{filtrage\+Node()}}.
+
+\Hypertarget{filtrage_8c_a72dfd1b37f04702220b72793e5443088}\label{filtrage_8c_a72dfd1b37f04702220b72793e5443088} 
+\index{filtrage.c@{filtrage.c}!filtrageNode@{filtrageNode}}
+\index{filtrageNode@{filtrageNode}!filtrage.c@{filtrage.c}}
+\doxysubsubsection{\texorpdfstring{filtrageNode()}{filtrageNode()}}
+{\footnotesize\ttfamily int filtrage\+Node (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structQuadTree}{Quad\+Tree}} \texorpdfstring{$\ast$}{*}}]{tree,  }\item[{int}]{node\+Index,  }\item[{double}]{sigma,  }\item[{double}]{alpha }\end{DoxyParamCaption})}
+
+
+
+filtrage\+Node is a recursive function that filters the nodes of the tree. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tree} & the quadtree. \\
+\hline
+{\em node\+Index} & the index of the studied node. \\
+\hline
+{\em sigma} & the calculated sigma. \\
+\hline
+{\em alpha} & the alpha. \\
+\hline
+\end{DoxyParams}
+
+
+References \mbox{\hyperlink{filtrage_8c_adcb1530988a8a882e04527cb446e1446}{compute\+Variance()}}, and \mbox{\hyperlink{filtrage_8c_a72dfd1b37f04702220b72793e5443088}{filtrage\+Node()}}.
+
+
+
+Referenced by \mbox{\hyperlink{filtrage_8h_aacc020a397f45750317afb735e025414}{filtrage()}}, and \mbox{\hyperlink{filtrage_8c_a72dfd1b37f04702220b72793e5443088}{filtrage\+Node()}}.
+

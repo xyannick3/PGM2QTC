@@ -1,0 +1,132 @@
+\doxysection{include/\+Quad\+Tree.h File Reference}
+\hypertarget{QuadTree_8h}{}\label{QuadTree_8h}\index{include/QuadTree.h@{include/QuadTree.h}}
+
+
+prototype of the public functions and structures of the modude Quadtree.  
+
+
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{QuadTree_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structCounter}{Counter}}
+\begin{DoxyCompactList}\small\item\em structure that helps with the counting. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structQuadTreeNode}{Quad\+Tree\+Node}}
+\begin{DoxyCompactList}\small\item\em structure of the quadtree. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structQuadTree}{Quad\+Tree}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structQuadTree}{Quad\+Tree}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{QuadTree_8h_a013b14610540996331c263028ba4da6f}{init\+Quad\+Tree}} (int depth)
+\begin{DoxyCompactList}\small\item\em initializes the quadtree \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{QuadTree_8h_abfd3eed4ca9442a3b923f045d868176e}{free\+Quad\+Tree}} (\mbox{\hyperlink{structQuadTree}{Quad\+Tree}} \texorpdfstring{$\ast$}{*}tree)
+\begin{DoxyCompactList}\small\item\em frees the quadtree {\ttfamily tree}, pretty straight forward. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{QuadTree_8h_a7586b766cb962189bb4a319c2b787096}{fill\+Quad\+Tree}} (\mbox{\hyperlink{structQuadTree}{Quad\+Tree}} \texorpdfstring{$\ast$}{*}tree, unsigned char \texorpdfstring{$\ast$}{*}pixels, int x, int y, int size, int node\+Index, int width)
+\begin{DoxyCompactList}\small\item\em take a pixmap then fills the quadtree as asked. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{QuadTree_8h_aa36145663f8bc016434fd5c23f3384c1}{print\+Quad\+Tree}} (\mbox{\hyperlink{structQuadTree}{Quad\+Tree}} \texorpdfstring{$\ast$}{*}tree)
+\begin{DoxyCompactList}\small\item\em displays the tree, node by node, used for debugging. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+prototype of the public functions and structures of the modude Quadtree. 
+
+\begin{DoxyAuthor}{Author}
+xyannick3 and Carapace\+Rose 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{QuadTree_8h_a7586b766cb962189bb4a319c2b787096}\label{QuadTree_8h_a7586b766cb962189bb4a319c2b787096} 
+\index{QuadTree.h@{QuadTree.h}!fillQuadTree@{fillQuadTree}}
+\index{fillQuadTree@{fillQuadTree}!QuadTree.h@{QuadTree.h}}
+\doxysubsubsection{\texorpdfstring{fillQuadTree()}{fillQuadTree()}}
+{\footnotesize\ttfamily void fill\+Quad\+Tree (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structQuadTree}{Quad\+Tree}} \texorpdfstring{$\ast$}{*}}]{tree,  }\item[{unsigned char \texorpdfstring{$\ast$}{*}}]{pixels,  }\item[{int}]{x,  }\item[{int}]{y,  }\item[{int}]{size,  }\item[{int}]{node\+Index,  }\item[{int}]{width }\end{DoxyParamCaption})}
+
+
+
+take a pixmap then fills the quadtree as asked. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tree} & tree to fill. \\
+\hline
+{\em pixels} & pixelmap \\
+\hline
+{\em x} & must be initialized at 0 \\
+\hline
+{\em y} & must be initialized at 0 \\
+\hline
+{\em size} & the width of the image \\
+\hline
+{\em node\+Index} & must be initialized at 0 \\
+\hline
+{\em width} & the width of the image. \\
+\hline
+\end{DoxyParams}
+
+
+References \mbox{\hyperlink{QuadTree_8c_a7586b766cb962189bb4a319c2b787096}{fill\+Quad\+Tree()}}.
+
+
+
+Referenced by \mbox{\hyperlink{QuadTree_8h_a7586b766cb962189bb4a319c2b787096}{fill\+Quad\+Tree()}}.
+
+\Hypertarget{QuadTree_8h_abfd3eed4ca9442a3b923f045d868176e}\label{QuadTree_8h_abfd3eed4ca9442a3b923f045d868176e} 
+\index{QuadTree.h@{QuadTree.h}!freeQuadTree@{freeQuadTree}}
+\index{freeQuadTree@{freeQuadTree}!QuadTree.h@{QuadTree.h}}
+\doxysubsubsection{\texorpdfstring{freeQuadTree()}{freeQuadTree()}}
+{\footnotesize\ttfamily void free\+Quad\+Tree (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structQuadTree}{Quad\+Tree}} \texorpdfstring{$\ast$}{*}}]{tree }\end{DoxyParamCaption})}
+
+
+
+frees the quadtree {\ttfamily tree}, pretty straight forward. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tree} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{QuadTree_8h_a013b14610540996331c263028ba4da6f}\label{QuadTree_8h_a013b14610540996331c263028ba4da6f} 
+\index{QuadTree.h@{QuadTree.h}!initQuadTree@{initQuadTree}}
+\index{initQuadTree@{initQuadTree}!QuadTree.h@{QuadTree.h}}
+\doxysubsubsection{\texorpdfstring{initQuadTree()}{initQuadTree()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structQuadTree}{Quad\+Tree}} \texorpdfstring{$\ast$}{*} init\+Quad\+Tree (\begin{DoxyParamCaption}\item[{int}]{depth }\end{DoxyParamCaption})}
+
+
+
+initializes the quadtree 
+
+
+\begin{DoxyParams}{Parameters}
+{\em depth} & depth is necessary to allocate the necessary memory. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Quad\+Tree\texorpdfstring{$\ast$}{*} 
+\end{DoxyReturn}
+
+
+Referenced by \mbox{\hyperlink{ReadQTC_8h_a5c66974a67fa4f76a349f32d76b52582}{read\+QTC()}}.
+
+\Hypertarget{QuadTree_8h_aa36145663f8bc016434fd5c23f3384c1}\label{QuadTree_8h_aa36145663f8bc016434fd5c23f3384c1} 
+\index{QuadTree.h@{QuadTree.h}!printQuadTree@{printQuadTree}}
+\index{printQuadTree@{printQuadTree}!QuadTree.h@{QuadTree.h}}
+\doxysubsubsection{\texorpdfstring{printQuadTree()}{printQuadTree()}}
+{\footnotesize\ttfamily void print\+Quad\+Tree (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structQuadTree}{Quad\+Tree}} \texorpdfstring{$\ast$}{*}}]{tree }\end{DoxyParamCaption})}
+
+
+
+displays the tree, node by node, used for debugging. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tree} & the tree to display. \\
+\hline
+\end{DoxyParams}

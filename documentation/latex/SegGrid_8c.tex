@@ -1,0 +1,94 @@
+\doxysection{src/\+Seg\+Grid.c File Reference}
+\hypertarget{SegGrid_8c}{}\label{SegGrid_8c}\index{src/SegGrid.c@{src/SegGrid.c}}
+
+
+source file of the Seg\+Grid module.  
+
+
+{\ttfamily \#include "{}../include/\+Seg\+Grid.\+h"{}}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$time.\+h$>$}\newline
+Include dependency graph for Seg\+Grid.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{SegGrid_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{SegGrid_8c_a1dd91ac8c71056db1b55a48bfc064b9b}{fill\+Pixels\+Seg\+Grid}} (unsigned char \texorpdfstring{$\ast$}{*}pixels, \mbox{\hyperlink{structQuadTreeNode}{Quad\+Tree\+Node}} \texorpdfstring{$\ast$}{*}nodes, int node\+Index, int x, int y, int size, int width)
+\begin{DoxyCompactList}\small\item\em fills the pixelmap in the goal of displaying a grid of the segmentation. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{SegGrid_8c_a4508951b7c9d0376b8b36117d505dbfd}{write\+Grid\+From\+Quad\+Tree}} (\mbox{\hyperlink{structQuadTree}{Quad\+Tree}} \texorpdfstring{$\ast$}{*}tree, const char \texorpdfstring{$\ast$}{*}filename, int size)
+\begin{DoxyCompactList}\small\item\em writes the grid\+PGM file that showcase the grid of the qtc. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+source file of the Seg\+Grid module. 
+
+\begin{DoxyAuthor}{Author}
+xyannick3 and Carapace\+Rose 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{SegGrid_8c_a1dd91ac8c71056db1b55a48bfc064b9b}\label{SegGrid_8c_a1dd91ac8c71056db1b55a48bfc064b9b} 
+\index{SegGrid.c@{SegGrid.c}!fillPixelsSegGrid@{fillPixelsSegGrid}}
+\index{fillPixelsSegGrid@{fillPixelsSegGrid}!SegGrid.c@{SegGrid.c}}
+\doxysubsubsection{\texorpdfstring{fillPixelsSegGrid()}{fillPixelsSegGrid()}}
+{\footnotesize\ttfamily void fill\+Pixels\+Seg\+Grid (\begin{DoxyParamCaption}\item[{unsigned char \texorpdfstring{$\ast$}{*}}]{pixels,  }\item[{\mbox{\hyperlink{structQuadTreeNode}{Quad\+Tree\+Node}} \texorpdfstring{$\ast$}{*}}]{nodes,  }\item[{int}]{node\+Index,  }\item[{int}]{x,  }\item[{int}]{y,  }\item[{int}]{size,  }\item[{int}]{width }\end{DoxyParamCaption})}
+
+
+
+fills the pixelmap in the goal of displaying a grid of the segmentation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pixels} & the pixmap. \\
+\hline
+{\em nodes} & the nodes of the quadtree. \\
+\hline
+{\em node\+Index} & the index of the studied node \\
+\hline
+{\em x} & the x coordinate of the top left of the segment \\
+\hline
+{\em y} & the y coordinate of the top left of the segment. \\
+\hline
+{\em size} & the size of the segment. \\
+\hline
+{\em width} & the width of the image. \\
+\hline
+\end{DoxyParams}
+
+
+References \mbox{\hyperlink{SegGrid_8c_a1dd91ac8c71056db1b55a48bfc064b9b}{fill\+Pixels\+Seg\+Grid()}}.
+
+
+
+Referenced by \mbox{\hyperlink{SegGrid_8c_a1dd91ac8c71056db1b55a48bfc064b9b}{fill\+Pixels\+Seg\+Grid()}}, and \mbox{\hyperlink{SegGrid_8h_a4508951b7c9d0376b8b36117d505dbfd}{write\+Grid\+From\+Quad\+Tree()}}.
+
+\Hypertarget{SegGrid_8c_a4508951b7c9d0376b8b36117d505dbfd}\label{SegGrid_8c_a4508951b7c9d0376b8b36117d505dbfd} 
+\index{SegGrid.c@{SegGrid.c}!writeGridFromQuadTree@{writeGridFromQuadTree}}
+\index{writeGridFromQuadTree@{writeGridFromQuadTree}!SegGrid.c@{SegGrid.c}}
+\doxysubsubsection{\texorpdfstring{writeGridFromQuadTree()}{writeGridFromQuadTree()}}
+{\footnotesize\ttfamily int write\+Grid\+From\+Quad\+Tree (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structQuadTree}{Quad\+Tree}} \texorpdfstring{$\ast$}{*}}]{tree,  }\item[{const char \texorpdfstring{$\ast$}{*}}]{filename,  }\item[{int}]{size }\end{DoxyParamCaption})}
+
+
+
+writes the grid\+PGM file that showcase the grid of the qtc. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tree} & the quadtree \\
+\hline
+{\em filename} & the name of the output file. \\
+\hline
+{\em size} & the width of the image. \\
+\hline
+\end{DoxyParams}
+
+
+References \mbox{\hyperlink{SegGrid_8c_a1dd91ac8c71056db1b55a48bfc064b9b}{fill\+Pixels\+Seg\+Grid()}}.
+

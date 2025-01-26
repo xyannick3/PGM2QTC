@@ -1,0 +1,115 @@
+\doxysection{include/\+Bit\+Buffer\+Write.h File Reference}
+\hypertarget{BitBufferWrite_8h}{}\label{BitBufferWrite_8h}\index{include/BitBufferWrite.h@{include/BitBufferWrite.h}}
+
+
+source code of the bit\+Buffer\+Write module\textquotesingle{}s public functions, it is used to write bit per bit into a file.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+Include dependency graph for Bit\+Buffer\+Write.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=213pt]{BitBufferWrite_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{BitBufferWrite_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structBitBuffer}{Bit\+Buffer}}
+\begin{DoxyCompactList}\small\item\em buffer structure \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{BitBufferWrite_8h_a51c241e7ad52441b8d4c1fd5f498b3b9}\label{BitBufferWrite_8h_a51c241e7ad52441b8d4c1fd5f498b3b9} 
+\#define {\bfseries MAX\+\_\+\+BITS}~8
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{BitBufferWrite_8h_a1b3e85dd8012fa0c68783303a25812e7}{init\+Bit\+Buffer}} (\mbox{\hyperlink{structBitBuffer}{Bit\+Buffer}} \texorpdfstring{$\ast$}{*}bit\+Buffer)
+\begin{DoxyCompactList}\small\item\em initializes the buffer. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{BitBufferWrite_8h_afa17bcdaccc5a9b673c8f4910fa9c070}{write\+Bit}} (\mbox{\hyperlink{structBitBuffer}{Bit\+Buffer}} \texorpdfstring{$\ast$}{*}bit\+Buffer, unsigned char bit, FILE \texorpdfstring{$\ast$}{*}file)
+\begin{DoxyCompactList}\small\item\em writes a bit into the buffer, if the buffer is full transfers it to the file. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{BitBufferWrite_8h_adcc57f093a3b7c7799457ef5f9b20b38}{flush\+Buffer}} (\mbox{\hyperlink{structBitBuffer}{Bit\+Buffer}} \texorpdfstring{$\ast$}{*}bit\+Buffer, FILE \texorpdfstring{$\ast$}{*}file)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+source code of the bit\+Buffer\+Write module\textquotesingle{}s public functions, it is used to write bit per bit into a file. 
+
+\begin{DoxyAuthor}{Author}
+xyannick3 and Carapace\+Rose 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{BitBufferWrite_8h_adcc57f093a3b7c7799457ef5f9b20b38}\label{BitBufferWrite_8h_adcc57f093a3b7c7799457ef5f9b20b38} 
+\index{BitBufferWrite.h@{BitBufferWrite.h}!flushBuffer@{flushBuffer}}
+\index{flushBuffer@{flushBuffer}!BitBufferWrite.h@{BitBufferWrite.h}}
+\doxysubsubsection{\texorpdfstring{flushBuffer()}{flushBuffer()}}
+{\footnotesize\ttfamily int flush\+Buffer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structBitBuffer}{Bit\+Buffer}} \texorpdfstring{$\ast$}{*}}]{bit\+Buffer,  }\item[{FILE \texorpdfstring{$\ast$}{*}}]{file }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em bit\+Buffer} & flushes the remaining bits from the buffer into the file \\
+\hline
+{\em file} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the amount of bits that have been added to the file. 
+\end{DoxyReturn}
+
+
+Referenced by \mbox{\hyperlink{writeQTC_8h_a3832ee46511970bd77c109af756cc91a}{write\+QTCFile()}}.
+
+\Hypertarget{BitBufferWrite_8h_a1b3e85dd8012fa0c68783303a25812e7}\label{BitBufferWrite_8h_a1b3e85dd8012fa0c68783303a25812e7} 
+\index{BitBufferWrite.h@{BitBufferWrite.h}!initBitBuffer@{initBitBuffer}}
+\index{initBitBuffer@{initBitBuffer}!BitBufferWrite.h@{BitBufferWrite.h}}
+\doxysubsubsection{\texorpdfstring{initBitBuffer()}{initBitBuffer()}}
+{\footnotesize\ttfamily void init\+Bit\+Buffer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structBitBuffer}{Bit\+Buffer}} \texorpdfstring{$\ast$}{*}}]{bit\+Buffer }\end{DoxyParamCaption})}
+
+
+
+initializes the buffer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bit\+Buffer} & a buffer for bits. \\
+\hline
+\end{DoxyParams}
+
+
+Referenced by \mbox{\hyperlink{writeQTC_8h_a3832ee46511970bd77c109af756cc91a}{write\+QTCFile()}}.
+
+\Hypertarget{BitBufferWrite_8h_afa17bcdaccc5a9b673c8f4910fa9c070}\label{BitBufferWrite_8h_afa17bcdaccc5a9b673c8f4910fa9c070} 
+\index{BitBufferWrite.h@{BitBufferWrite.h}!writeBit@{writeBit}}
+\index{writeBit@{writeBit}!BitBufferWrite.h@{BitBufferWrite.h}}
+\doxysubsubsection{\texorpdfstring{writeBit()}{writeBit()}}
+{\footnotesize\ttfamily void write\+Bit (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structBitBuffer}{Bit\+Buffer}} \texorpdfstring{$\ast$}{*}}]{bit\+Buffer,  }\item[{unsigned char}]{bit,  }\item[{FILE \texorpdfstring{$\ast$}{*}}]{file }\end{DoxyParamCaption})}
+
+
+
+writes a bit into the buffer, if the buffer is full transfers it to the file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bit\+Buffer} & the buffer. \\
+\hline
+{\em bit} & the bit. \\
+\hline
+{\em file} & the output file. \\
+\hline
+\end{DoxyParams}
+
+
+Referenced by \mbox{\hyperlink{writeQTC_8c_a520574ec5642cec0cec8f67782fc06a2}{encode\+Quad\+Tree()}}, and \mbox{\hyperlink{writeQTC_8h_a3832ee46511970bd77c109af756cc91a}{write\+QTCFile()}}.
+

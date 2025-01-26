@@ -1,0 +1,156 @@
+\doxysection{include/\+Bit\+Buffer\+Read.h File Reference}
+\hypertarget{BitBufferRead_8h}{}\label{BitBufferRead_8h}\index{include/BitBufferRead.h@{include/BitBufferRead.h}}
+
+
+source code of the bitbuffer module, it is used to write bit per bit into a file.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+Include dependency graph for Bit\+Buffer\+Read.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=211pt]{BitBufferRead_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=294pt]{BitBufferRead_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structBitReader}{Bit\+Reader}}
+\begin{DoxyCompactList}\small\item\em the structure of the \doxylink{structBitReader}{Bit\+Reader} \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{BitBufferRead_8h_a51c241e7ad52441b8d4c1fd5f498b3b9}\label{BitBufferRead_8h_a51c241e7ad52441b8d4c1fd5f498b3b9} 
+\#define {\bfseries MAX\+\_\+\+BITS}~8
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{BitBufferRead_8h_a1f7a4ce2cde42e17a128f541b26960b7}{init\+Bit\+Reader}} (\mbox{\hyperlink{structBitReader}{Bit\+Reader}} \texorpdfstring{$\ast$}{*}bit\+Reader, FILE \texorpdfstring{$\ast$}{*}file)
+\begin{DoxyCompactList}\small\item\em initializes the buffer to read from a text file. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{BitBufferRead_8h_ad5436bef3135ea1843cd9f18ccd51f7c}{read\+Bit}} (\mbox{\hyperlink{structBitReader}{Bit\+Reader}} \texorpdfstring{$\ast$}{*}bit\+Reader, unsigned char \texorpdfstring{$\ast$}{*}bit)
+\begin{DoxyCompactList}\small\item\em read a single bit. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{BitBufferRead_8h_ab5abe8fff4bf99b517f5a2a078905462}{read\+Byte}} (\mbox{\hyperlink{structBitReader}{Bit\+Reader}} \texorpdfstring{$\ast$}{*}bit\+Reader, unsigned char \texorpdfstring{$\ast$}{*}byte)
+\begin{DoxyCompactList}\small\item\em read a Byte (8 bits). \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{BitBufferRead_8h_a3cd84051292b3fc632fecb43187aad3f}{read\+Two\+Bits}} (\mbox{\hyperlink{structBitReader}{Bit\+Reader}} \texorpdfstring{$\ast$}{*}bit\+Reader, unsigned char \texorpdfstring{$\ast$}{*}value)
+\begin{DoxyCompactList}\small\item\em read two bits. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+source code of the bitbuffer module, it is used to write bit per bit into a file. 
+
+\begin{DoxyAuthor}{Author}
+xyannick3 and Carapace\+Rose 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{BitBufferRead_8h_a1f7a4ce2cde42e17a128f541b26960b7}\label{BitBufferRead_8h_a1f7a4ce2cde42e17a128f541b26960b7} 
+\index{BitBufferRead.h@{BitBufferRead.h}!initBitReader@{initBitReader}}
+\index{initBitReader@{initBitReader}!BitBufferRead.h@{BitBufferRead.h}}
+\doxysubsubsection{\texorpdfstring{initBitReader()}{initBitReader()}}
+{\footnotesize\ttfamily void init\+Bit\+Reader (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structBitReader}{Bit\+Reader}} \texorpdfstring{$\ast$}{*}}]{bit\+Reader,  }\item[{FILE \texorpdfstring{$\ast$}{*}}]{file }\end{DoxyParamCaption})}
+
+
+
+initializes the buffer to read from a text file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bit\+Reader} & the bit\+Reader that\textquotesingle{}s been initialized \\
+\hline
+{\em file} & the file to be read. \\
+\hline
+\end{DoxyParams}
+
+
+Referenced by \mbox{\hyperlink{ReadQTC_8c_a9247f952026920331dfe98107ede659b}{fill\+Quad\+Treefrom\+Compress()}}.
+
+\Hypertarget{BitBufferRead_8h_ad5436bef3135ea1843cd9f18ccd51f7c}\label{BitBufferRead_8h_ad5436bef3135ea1843cd9f18ccd51f7c} 
+\index{BitBufferRead.h@{BitBufferRead.h}!readBit@{readBit}}
+\index{readBit@{readBit}!BitBufferRead.h@{BitBufferRead.h}}
+\doxysubsubsection{\texorpdfstring{readBit()}{readBit()}}
+{\footnotesize\ttfamily int read\+Bit (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structBitReader}{Bit\+Reader}} \texorpdfstring{$\ast$}{*}}]{bit\+Reader,  }\item[{unsigned char \texorpdfstring{$\ast$}{*}}]{bit }\end{DoxyParamCaption})}
+
+
+
+read a single bit. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bit\+Reader} & the bitreader. \\
+\hline
+{\em bit} & the bit output. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 if successful, 0 if EOF. 
+\end{DoxyReturn}
+
+
+Referenced by \mbox{\hyperlink{ReadQTC_8c_a9247f952026920331dfe98107ede659b}{fill\+Quad\+Treefrom\+Compress()}}, \mbox{\hyperlink{ReadQTC_8c_aef837ba13de96d3c025a7724c6901118}{handle\+Fourth\+Child()}}, \mbox{\hyperlink{BitBufferRead_8h_ab5abe8fff4bf99b517f5a2a078905462}{read\+Byte()}}, \mbox{\hyperlink{BitBufferRead_8h_a3cd84051292b3fc632fecb43187aad3f}{read\+Two\+Bits()}}, and \mbox{\hyperlink{ReadQTC_8c_a3cebc61d4724cc0edc02c52dd3a60e0f}{the\+Normal\+Wayyyy()}}.
+
+\Hypertarget{BitBufferRead_8h_ab5abe8fff4bf99b517f5a2a078905462}\label{BitBufferRead_8h_ab5abe8fff4bf99b517f5a2a078905462} 
+\index{BitBufferRead.h@{BitBufferRead.h}!readByte@{readByte}}
+\index{readByte@{readByte}!BitBufferRead.h@{BitBufferRead.h}}
+\doxysubsubsection{\texorpdfstring{readByte()}{readByte()}}
+{\footnotesize\ttfamily int read\+Byte (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structBitReader}{Bit\+Reader}} \texorpdfstring{$\ast$}{*}}]{bit\+Reader,  }\item[{unsigned char \texorpdfstring{$\ast$}{*}}]{byte }\end{DoxyParamCaption})}
+
+
+
+read a Byte (8 bits). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bit\+Reader} & the bitreader. \\
+\hline
+{\em bit} & the output. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 if successful, 0 if EOF. 
+\end{DoxyReturn}
+
+
+References \mbox{\hyperlink{BitBufferRead_8c_ad5436bef3135ea1843cd9f18ccd51f7c}{read\+Bit()}}.
+
+
+
+Referenced by \mbox{\hyperlink{ReadQTC_8c_a9247f952026920331dfe98107ede659b}{fill\+Quad\+Treefrom\+Compress()}}, and \mbox{\hyperlink{ReadQTC_8c_a3cebc61d4724cc0edc02c52dd3a60e0f}{the\+Normal\+Wayyyy()}}.
+
+\Hypertarget{BitBufferRead_8h_a3cd84051292b3fc632fecb43187aad3f}\label{BitBufferRead_8h_a3cd84051292b3fc632fecb43187aad3f} 
+\index{BitBufferRead.h@{BitBufferRead.h}!readTwoBits@{readTwoBits}}
+\index{readTwoBits@{readTwoBits}!BitBufferRead.h@{BitBufferRead.h}}
+\doxysubsubsection{\texorpdfstring{readTwoBits()}{readTwoBits()}}
+{\footnotesize\ttfamily int read\+Two\+Bits (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structBitReader}{Bit\+Reader}} \texorpdfstring{$\ast$}{*}}]{bit\+Reader,  }\item[{unsigned char \texorpdfstring{$\ast$}{*}}]{value }\end{DoxyParamCaption})}
+
+
+
+read two bits. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bit\+Reader} & the bitreader. \\
+\hline
+{\em bit} & the output. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 if successful, 0 if EOF. 
+\end{DoxyReturn}
+
+
+References \mbox{\hyperlink{BitBufferRead_8c_ad5436bef3135ea1843cd9f18ccd51f7c}{read\+Bit()}}.
+
+
+
+Referenced by \mbox{\hyperlink{ReadQTC_8c_a9247f952026920331dfe98107ede659b}{fill\+Quad\+Treefrom\+Compress()}}, \mbox{\hyperlink{ReadQTC_8c_aef837ba13de96d3c025a7724c6901118}{handle\+Fourth\+Child()}}, and \mbox{\hyperlink{ReadQTC_8c_a3cebc61d4724cc0edc02c52dd3a60e0f}{the\+Normal\+Wayyyy()}}.
+

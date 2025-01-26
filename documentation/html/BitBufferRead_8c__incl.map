@@ -1,0 +1,13 @@
+<map id="src/BitBufferRead.c" name="src/BitBufferRead.c">
+<area shape="rect" id="Node000001" title="source code of the bitbuffer module&#39;s public functions" alt="" coords="221,5,368,31"/>
+<area shape="rect" id="Node000002" href="$BitBufferRead_8h.html" title="source code of the bitbuffer module, it is used to write bit per bit into a file." alt="" coords="5,79,192,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="264,33,144,76,143,71,262,28"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="196,152,263,177"/>
+<area shape="poly" id="edge5_Node000001_Node000003" title=" " alt="" coords="288,32,257,80,237,139,232,138,252,78,283,30"/>
+<area shape="rect" id="Node000004" href="$BitBufferWrite_8h.html" title="source code of the bitBufferWrite module&#39;s public functions, it is used to write bit per bit into a f..." alt="" coords="267,79,456,104"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="308,29,343,67,339,70,304,33"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="481,79,551,104"/>
+<area shape="poly" id="edge6_Node000001_Node000005" title=" " alt="" coords="331,28,469,72,467,77,329,33"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="121,102,197,143,195,148,118,106"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="341,106,264,148,262,143,339,102"/>
+</map>

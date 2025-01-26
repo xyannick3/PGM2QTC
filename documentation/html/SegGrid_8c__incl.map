@@ -1,0 +1,13 @@
+<map id="src/SegGrid.c" name="src/SegGrid.c">
+<area shape="rect" id="Node000001" title="source file of the SegGrid module." alt="" coords="205,5,311,31"/>
+<area shape="rect" id="Node000002" href="$SegGrid_8h.html" title="prototype of the public functions and structures of the modude SegGrid." alt="" coords="5,79,153,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="230,33,122,76,120,71,228,28"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="178,79,245,104"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="253,32,229,69,224,66,248,30"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="269,79,340,104"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="268,30,292,66,287,69,263,32"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="365,79,429,104"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="281,28,363,70,361,75,279,33"/>
+<area shape="rect" id="Node000003" href="$QuadTree_8h.html" title="prototype of the public functions and structures of the modude Quadtree." alt="" coords="32,152,127,177"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="82,104,82,138,77,138,77,104"/>
+</map>

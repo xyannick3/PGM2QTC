@@ -1,0 +1,7 @@
+<map id="include/BitBufferRead.h" name="include/BitBufferRead.h">
+<area shape="rect" id="Node000001" title="source code of the bitbuffer module, it is used to write bit per bit into a file." alt="" coords="69,5,243,31"/>
+<area shape="rect" id="Node000002" href="$BitBufferRead_8c.html" title="source code of the bitbuffer module&#39;s public functions" alt="" coords="5,79,152,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="135,42,93,80,90,76,132,38"/>
+<area shape="rect" id="Node000003" href="$ReadQTC_8c.html" title="source file of the ReadQTC module." alt="" coords="176,79,291,104"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="180,38,222,76,219,80,177,42"/>
+</map>

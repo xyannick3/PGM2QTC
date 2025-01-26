@@ -1,0 +1,61 @@
+\doxysection{include/\+Seg\+Grid.h File Reference}
+\hypertarget{SegGrid_8h}{}\label{SegGrid_8h}\index{include/SegGrid.h@{include/SegGrid.h}}
+
+
+prototype of the public functions and structures of the modude Seg\+Grid.  
+
+
+{\ttfamily \#include "{}Quad\+Tree.\+h"{}}\newline
+Include dependency graph for Seg\+Grid.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=182pt]{SegGrid_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=246pt]{SegGrid_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{SegGrid_8h_a4508951b7c9d0376b8b36117d505dbfd}{write\+Grid\+From\+Quad\+Tree}} (\mbox{\hyperlink{structQuadTree}{Quad\+Tree}} \texorpdfstring{$\ast$}{*}tree, const char \texorpdfstring{$\ast$}{*}filename, int size)
+\begin{DoxyCompactList}\small\item\em writes the grid\+PGM file that showcase the grid of the qtc. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+prototype of the public functions and structures of the modude Seg\+Grid. 
+
+\begin{DoxyAuthor}{Author}
+xyannick3 and Carapace\+Rose 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{SegGrid_8h_a4508951b7c9d0376b8b36117d505dbfd}\label{SegGrid_8h_a4508951b7c9d0376b8b36117d505dbfd} 
+\index{SegGrid.h@{SegGrid.h}!writeGridFromQuadTree@{writeGridFromQuadTree}}
+\index{writeGridFromQuadTree@{writeGridFromQuadTree}!SegGrid.h@{SegGrid.h}}
+\doxysubsubsection{\texorpdfstring{writeGridFromQuadTree()}{writeGridFromQuadTree()}}
+{\footnotesize\ttfamily int write\+Grid\+From\+Quad\+Tree (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structQuadTree}{Quad\+Tree}} \texorpdfstring{$\ast$}{*}}]{tree,  }\item[{const char \texorpdfstring{$\ast$}{*}}]{filename,  }\item[{int}]{size }\end{DoxyParamCaption})}
+
+
+
+writes the grid\+PGM file that showcase the grid of the qtc. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tree} & the quadtree \\
+\hline
+{\em filename} & the name of the output file. \\
+\hline
+{\em size} & the width of the image. \\
+\hline
+\end{DoxyParams}
+
+
+References \mbox{\hyperlink{SegGrid_8c_a1dd91ac8c71056db1b55a48bfc064b9b}{fill\+Pixels\+Seg\+Grid()}}.
+
