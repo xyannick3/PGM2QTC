@@ -26,6 +26,7 @@
  */
 void print_help(){
     printf("Usage:\n");
+    printf("-m                multithreading mode (experimental)\n");
     printf(" -c               Encode mode\n");
     printf(" -u               Decode mode\n");
     printf(" -p               converts a non conform PGM file into a compliant one.\n");
@@ -47,12 +48,14 @@ int main(int argc, char** argv){
     unsigned char* pixels = NULL;
     int width = 0, depth = 0;
     double alpha = 1.0;
-    int encode = 0, decode = 0, pad = 0, verbose = 0, edit_grid = 0;
+    int encode = 0, decode = 0, pad = 0, verbose = 0, edit_grid = 0, multithread = 0;
     char *input_file = NULL;
     char *output_file = NULL;
     int opt;
-    while ((opt = getopt(argc, argv, "cupi:o:gvha:")) != -1){
+    while ((opt = getopt(argc, argv, "mcupi:o:gvha:")) != -1){
         switch (opt) {
+            case 'm':
+                multithread = 1;
             case 'c':
                 encode = 1;
                 break;
@@ -130,7 +133,11 @@ int main(int argc, char** argv){
         pixels = readPGM(input_file, &width);
         depth = (int)log2(width);
         quadtree = initQuadTree(depth);
-        fillQuadTree(quadtree, pixels, 0, 0, width, 0, width);
+        if(multithread) {
+            init_multithread_filltree(quadtree, pixels, 0, 0, width, 0, width);
+        }else {
+            fillQuadTree(quadtree, pixels, 0, 0, width, 0, width);
+        }
         if (verbose) printf("Quadtree created from PGM file: %s\n",input_file);
         if (!pixels){
             fprintf(stderr, "Failed to read the PGM file. \n");
@@ -138,14 +145,6 @@ int main(int argc, char** argv){
         //if (verbose) printQuadTree(quadtree);
         if (alpha != 1.0){
             filtrage(quadtree, alpha);
-            /*
-            double medvar;
-            double maxvar;
-            computeVars(quadtree, &medvar, &maxvar);
-            
-            printf("medvar : %f, maxvar : %f, sigma : %f \n", medvar, maxvar, medvar/maxvar);
-            filtrageNode(quadtree, 0, medvar/maxvar, alpha);            
-            */
         }
         if (quadtree){
             //writeQuadTreeFileNoLoss(output_file, quadtree, width, depth);

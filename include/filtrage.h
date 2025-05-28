@@ -14,6 +14,4 @@
  * @param alpha the value that determines how much the quadtree is to be filtered.
  */
 void filtrage(QuadTree* tree, double alpha);
-
-
 #endif

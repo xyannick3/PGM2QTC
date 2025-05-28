@@ -68,5 +68,18 @@ void fillQuadTree(QuadTree* tree, unsigned char* pixels, int x, int y, int size,
  * @param tree the tree to display.
  */
 void printQuadTree(QuadTree* tree);
+/**
+ * @brief same as fillQuadTree but based on multithreading to attempt to increase performance
+ * 
+ * @param tree 
+ * @param pixels 
+ * @param x 
+ * @param y 
+ * @param size 
+ * @param nodeIndex 
+ * @param width 
+ */
+void init_multithread_filltree(QuadTree* tree, unsigned char* pixels, int x, int y, int size, int nodeIndex, int width);
+
 
 #endif
