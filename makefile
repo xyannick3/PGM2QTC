@@ -1,6 +1,6 @@
 #compiler & flags
 CC = gcc
-CFLAGS = -Wall -Iinclude -g -lm -fPIC
+CFLAGS = -Wall -Iinclude -g -lm -fPIC -lpthread
 LDFLAGS = -shared -lm
 
 #directories
